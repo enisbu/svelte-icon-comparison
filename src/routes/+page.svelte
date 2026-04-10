@@ -111,7 +111,7 @@
 			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 				<div class="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
 					<h2 class="text-2xl font-semibold text-white">@lucide/svelte</h2>
-					<span class="rounded-full bg-emerald-500/10 px-3 py-0.5 text-sm text-emerald-400">v0.561.0</span>
+					<span class="rounded-full bg-emerald-500/10 px-3 py-0.5 text-sm text-emerald-400">v1.8.0</span>
 				</div>
 
 				<div class="mb-6 grid grid-cols-2 gap-4 text-sm text-zinc-400 sm:grid-cols-4">

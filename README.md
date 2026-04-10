@@ -1,4 +1,4 @@
-<h1 align="center">icon-comparison</h1>
+<h1 align="center">svelte-icon-comparison</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Svelte 5" />
@@ -9,6 +9,10 @@
 <p align="center">
   <strong>Side-by-side comparison of 5 popular Svelte icon libraries.</strong><br/>
   <sub>Visual preview • Import patterns • Bundle info • Brand icon coverage</sub>
+</p>
+
+<p align="center">
+  <img src="screenshot.png" alt="svelte-icon-comparison" width="800" />
 </p>
 
 ---
@@ -32,7 +36,7 @@ pnpm install
 pnpm dev
 ```
 
-Opens at [localhost:5555](http://localhost:5555).
+Opens at [localhost:5173](http://localhost:5173).
 
 ---
 
