@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="screenshot.png" alt="svelte-icon-comparison" width="800" />
+  <img src="preview.png" alt="svelte-icon-comparison" width="800" />
 </p>
 
 ---
