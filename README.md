@@ -44,7 +44,6 @@ Opens at [localhost:5173](http://localhost:5173).
 
 - **SvelteKit 5** with runes mode
 - **Tailwind CSS v4** via Vite plugin
-- **Dark theme** UI
 
 ---
 
