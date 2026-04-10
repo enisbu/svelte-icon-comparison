@@ -1,42 +1,56 @@
-# sv
+<h1 align="center">icon-comparison</h1>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+<p align="center">
+  <img src="https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Svelte 5" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS v4" />
+  <img src="https://img.shields.io/badge/License-MIT-black?style=flat-square" alt="License" />
+</p>
 
-## Creating a project
+<p align="center">
+  <strong>Side-by-side comparison of 5 popular Svelte icon libraries.</strong><br/>
+  <sub>Visual preview • Import patterns • Bundle info • Brand icon coverage</sub>
+</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
 
-```sh
-# create a new project
-npx sv create my-app
+## Libraries Compared
+
+| Library | Icons | Brand Icons | Import Pattern | Notes |
+|---------|-------|-------------|----------------|-------|
+| `@lucide/svelte` | ~1,500+ | No | `Home` | Clean, minimal. Brand icons removed in v1.x |
+| `@tabler/icons-svelte` | ~5,800+ | Yes | `IconHome` | Largest free set. 2px stroke default |
+| `phosphor-svelte` | ~1,500+ | Yes | `House` | 6 weight variants. Unique naming |
+| `svelte-remix` | ~2,800+ | Yes | `HomeLineBuildings` | Verbose naming with category suffix |
+| `@hugeicons/svelte` | 5,100+ | Yes | `Home01Icon` | Data-driven. Separate icon data package |
+
+---
+
+## Quick Start
+
+```bash
+pnpm install
+pnpm dev
 ```
 
-To recreate this project with the same configuration:
+Opens at [localhost:5555](http://localhost:5555).
 
-```sh
-# recreate this project
-npx sv@0.15.1 create --template minimal --types ts --no-install .
-```
+---
 
-## Developing
+## Stack
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **SvelteKit 5** with runes mode
+- **Tailwind CSS v4** via Vite plugin
+- **Dark theme** UI
 
-```sh
-npm run dev
+---
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## What It Shows
 
-## Building
+Each library gets a card displaying:
 
-To create a production version of your app:
+- **10 common icons** — Home, Search, Settings, Heart, Star, Calendar, Mail, Phone, Camera, ChevronRight
+- **5 brand icons** — Instagram, WhatsApp, Github, Twitter/X, TikTok
+- **Metadata** — icon count, tree-shakeability, bundle size per icon
+- **Import pattern** — how each library names its exports
 
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+A summary comparison table at the bottom ties it all together.

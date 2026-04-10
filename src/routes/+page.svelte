@@ -1,5 +1,4 @@
 <script lang="ts">
-	// Lucide (v0.561.0)
 	import {
 		Home as LucideHome,
 		Search as LucideSearch,
@@ -13,7 +12,6 @@
 		ChevronRight as LucideChevronRight
 	} from '@lucide/svelte';
 
-	// Tabler (v3.41.1)
 	import {
 		IconHome,
 		IconSearch,
@@ -32,7 +30,6 @@
 		IconBrandTiktok
 	} from '@tabler/icons-svelte';
 
-	// Phosphor (v3.1.0)
 	import {
 		House as PhosphorHouse,
 		MagnifyingGlass as PhosphorSearch,
@@ -51,7 +48,6 @@
 		TiktokLogo as PhosphorTiktok
 	} from 'phosphor-svelte';
 
-	// Remix (v3.0.1) — uses CategorySuffix naming convention
 	import {
 		HomeLineBuildings as RemixHome,
 		SearchLineSystem as RemixSearch,
@@ -70,7 +66,6 @@
 		TiktokLineLogos as RemixTiktok
 	} from 'svelte-remix';
 
-	// Hugeicons (v1.1.2) — uses HugeiconsIcon component + icon data objects
 	import { HugeiconsIcon } from '@hugeicons/svelte';
 	import {
 		Home01Icon,
@@ -90,8 +85,9 @@
 		TiktokIcon
 	} from '@hugeicons/core-free-icons';
 
+	import IconCell from '$lib/IconCell.svelte';
+
 	const SIZE = 24;
-	const REMIX_SIZE = `${SIZE}`;
 </script>
 
 <svelte:head>
@@ -100,7 +96,6 @@
 
 <div class="min-h-screen bg-zinc-950 text-zinc-100 px-6 py-12 font-sans">
 	<div class="mx-auto max-w-7xl">
-		<!-- Header -->
 		<header class="mb-16 text-center">
 			<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
 				Svelte Icon Libraries
@@ -110,11 +105,10 @@
 			</p>
 		</header>
 
-		<!-- Grid of Cards -->
 		<div class="grid gap-8">
 
-			<!-- ======================== LUCIDE ======================== -->
-			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+			<!-- LUCIDE -->
+			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 				<div class="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
 					<h2 class="text-2xl font-semibold text-white">@lucide/svelte</h2>
 					<span class="rounded-full bg-emerald-500/10 px-3 py-0.5 text-sm text-emerald-400">v0.561.0</span>
@@ -143,33 +137,33 @@
 				<div class="mb-4">
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Common Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideHome size={SIZE} /></div><span class="text-[10px] text-zinc-500">Home</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideSearch size={SIZE} /></div><span class="text-[10px] text-zinc-500">Search</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideSettings size={SIZE} /></div><span class="text-[10px] text-zinc-500">Settings</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideHeart size={SIZE} /></div><span class="text-[10px] text-zinc-500">Heart</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideStar size={SIZE} /></div><span class="text-[10px] text-zinc-500">Star</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideCalendar size={SIZE} /></div><span class="text-[10px] text-zinc-500">Calendar</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideMail size={SIZE} /></div><span class="text-[10px] text-zinc-500">Mail</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucidePhone size={SIZE} /></div><span class="text-[10px] text-zinc-500">Phone</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideCamera size={SIZE} /></div><span class="text-[10px] text-zinc-500">Camera</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><LucideChevronRight size={SIZE} /></div><span class="text-[10px] text-zinc-500">ChevronRight</span></div>
+						<IconCell label="Home"><LucideHome size={SIZE} /></IconCell>
+						<IconCell label="Search"><LucideSearch size={SIZE} /></IconCell>
+						<IconCell label="Settings"><LucideSettings size={SIZE} /></IconCell>
+						<IconCell label="Heart"><LucideHeart size={SIZE} /></IconCell>
+						<IconCell label="Star"><LucideStar size={SIZE} /></IconCell>
+						<IconCell label="Calendar"><LucideCalendar size={SIZE} /></IconCell>
+						<IconCell label="Mail"><LucideMail size={SIZE} /></IconCell>
+						<IconCell label="Phone"><LucidePhone size={SIZE} /></IconCell>
+						<IconCell label="Camera"><LucideCamera size={SIZE} /></IconCell>
+						<IconCell label="ChevronRight"><LucideChevronRight size={SIZE} /></IconCell>
 					</div>
 				</div>
 
 				<div>
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Brand Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/40 text-zinc-600"><span class="text-xs">N/A</span></div><span class="text-[10px] text-zinc-500">Instagram</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/40 text-zinc-600"><span class="text-xs">N/A</span></div><span class="text-[10px] text-zinc-500">WhatsApp</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/40 text-zinc-600"><span class="text-xs">N/A</span></div><span class="text-[10px] text-zinc-500">Github</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/40 text-zinc-600"><span class="text-xs">N/A</span></div><span class="text-[10px] text-zinc-500">Twitter/X</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/40 text-zinc-600"><span class="text-xs">N/A</span></div><span class="text-[10px] text-zinc-500">TikTok</span></div>
+						<IconCell label="Instagram" disabled />
+						<IconCell label="WhatsApp" disabled />
+						<IconCell label="Github" disabled />
+						<IconCell label="Twitter/X" disabled />
+						<IconCell label="TikTok" disabled />
 					</div>
 				</div>
 			</section>
 
-			<!-- ======================== TABLER ======================== -->
-			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+			<!-- TABLER -->
+			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 				<div class="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
 					<h2 class="text-2xl font-semibold text-white">@tabler/icons-svelte</h2>
 					<span class="rounded-full bg-blue-500/10 px-3 py-0.5 text-sm text-blue-400">v3.41.1</span>
@@ -198,33 +192,33 @@
 				<div class="mb-4">
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Common Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconHome size={SIZE} /></div><span class="text-[10px] text-zinc-500">Home</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconSearch size={SIZE} /></div><span class="text-[10px] text-zinc-500">Search</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconSettings size={SIZE} /></div><span class="text-[10px] text-zinc-500">Settings</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconHeart size={SIZE} /></div><span class="text-[10px] text-zinc-500">Heart</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconStar size={SIZE} /></div><span class="text-[10px] text-zinc-500">Star</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconCalendar size={SIZE} /></div><span class="text-[10px] text-zinc-500">Calendar</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconMail size={SIZE} /></div><span class="text-[10px] text-zinc-500">Mail</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconPhone size={SIZE} /></div><span class="text-[10px] text-zinc-500">Phone</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconCamera size={SIZE} /></div><span class="text-[10px] text-zinc-500">Camera</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconChevronRight size={SIZE} /></div><span class="text-[10px] text-zinc-500">ChevronRight</span></div>
+						<IconCell label="Home"><IconHome size={SIZE} /></IconCell>
+						<IconCell label="Search"><IconSearch size={SIZE} /></IconCell>
+						<IconCell label="Settings"><IconSettings size={SIZE} /></IconCell>
+						<IconCell label="Heart"><IconHeart size={SIZE} /></IconCell>
+						<IconCell label="Star"><IconStar size={SIZE} /></IconCell>
+						<IconCell label="Calendar"><IconCalendar size={SIZE} /></IconCell>
+						<IconCell label="Mail"><IconMail size={SIZE} /></IconCell>
+						<IconCell label="Phone"><IconPhone size={SIZE} /></IconCell>
+						<IconCell label="Camera"><IconCamera size={SIZE} /></IconCell>
+						<IconCell label="ChevronRight"><IconChevronRight size={SIZE} /></IconCell>
 					</div>
 				</div>
 
 				<div>
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Brand Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconBrandInstagram size={SIZE} /></div><span class="text-[10px] text-zinc-500">Instagram</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconBrandWhatsapp size={SIZE} /></div><span class="text-[10px] text-zinc-500">WhatsApp</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconBrandGithub size={SIZE} /></div><span class="text-[10px] text-zinc-500">Github</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconBrandTwitter size={SIZE} /></div><span class="text-[10px] text-zinc-500">Twitter/X</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><IconBrandTiktok size={SIZE} /></div><span class="text-[10px] text-zinc-500">TikTok</span></div>
+						<IconCell label="Instagram"><IconBrandInstagram size={SIZE} /></IconCell>
+						<IconCell label="WhatsApp"><IconBrandWhatsapp size={SIZE} /></IconCell>
+						<IconCell label="Github"><IconBrandGithub size={SIZE} /></IconCell>
+						<IconCell label="Twitter/X"><IconBrandTwitter size={SIZE} /></IconCell>
+						<IconCell label="TikTok"><IconBrandTiktok size={SIZE} /></IconCell>
 					</div>
 				</div>
 			</section>
 
-			<!-- ======================== PHOSPHOR ======================== -->
-			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+			<!-- PHOSPHOR -->
+			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 				<div class="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
 					<h2 class="text-2xl font-semibold text-white">phosphor-svelte</h2>
 					<span class="rounded-full bg-violet-500/10 px-3 py-0.5 text-sm text-violet-400">v3.1.0</span>
@@ -253,33 +247,33 @@
 				<div class="mb-4">
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Common Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorHouse size={SIZE} /></div><span class="text-[10px] text-zinc-500">House</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorSearch size={SIZE} /></div><span class="text-[10px] text-zinc-500">Search</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorGear size={SIZE} /></div><span class="text-[10px] text-zinc-500">Gear</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorHeart size={SIZE} /></div><span class="text-[10px] text-zinc-500">Heart</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorStar size={SIZE} /></div><span class="text-[10px] text-zinc-500">Star</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorCalendar size={SIZE} /></div><span class="text-[10px] text-zinc-500">Calendar</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorEnvelope size={SIZE} /></div><span class="text-[10px] text-zinc-500">Envelope</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorPhone size={SIZE} /></div><span class="text-[10px] text-zinc-500">Phone</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorCamera size={SIZE} /></div><span class="text-[10px] text-zinc-500">Camera</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorCaretRight size={SIZE} /></div><span class="text-[10px] text-zinc-500">CaretRight</span></div>
+						<IconCell label="House"><PhosphorHouse size={SIZE} /></IconCell>
+						<IconCell label="Search"><PhosphorSearch size={SIZE} /></IconCell>
+						<IconCell label="Gear"><PhosphorGear size={SIZE} /></IconCell>
+						<IconCell label="Heart"><PhosphorHeart size={SIZE} /></IconCell>
+						<IconCell label="Star"><PhosphorStar size={SIZE} /></IconCell>
+						<IconCell label="Calendar"><PhosphorCalendar size={SIZE} /></IconCell>
+						<IconCell label="Envelope"><PhosphorEnvelope size={SIZE} /></IconCell>
+						<IconCell label="Phone"><PhosphorPhone size={SIZE} /></IconCell>
+						<IconCell label="Camera"><PhosphorCamera size={SIZE} /></IconCell>
+						<IconCell label="CaretRight"><PhosphorCaretRight size={SIZE} /></IconCell>
 					</div>
 				</div>
 
 				<div>
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Brand Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorInstagram size={SIZE} /></div><span class="text-[10px] text-zinc-500">Instagram</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorWhatsapp size={SIZE} /></div><span class="text-[10px] text-zinc-500">WhatsApp</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorGithub size={SIZE} /></div><span class="text-[10px] text-zinc-500">Github</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorX size={SIZE} /></div><span class="text-[10px] text-zinc-500">X (Twitter)</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><PhosphorTiktok size={SIZE} /></div><span class="text-[10px] text-zinc-500">TikTok</span></div>
+						<IconCell label="Instagram"><PhosphorInstagram size={SIZE} /></IconCell>
+						<IconCell label="WhatsApp"><PhosphorWhatsapp size={SIZE} /></IconCell>
+						<IconCell label="Github"><PhosphorGithub size={SIZE} /></IconCell>
+						<IconCell label="X (Twitter)"><PhosphorX size={SIZE} /></IconCell>
+						<IconCell label="TikTok"><PhosphorTiktok size={SIZE} /></IconCell>
 					</div>
 				</div>
 			</section>
 
-			<!-- ======================== REMIX ======================== -->
-			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+			<!-- REMIX -->
+			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 				<div class="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
 					<h2 class="text-2xl font-semibold text-white">svelte-remix</h2>
 					<span class="rounded-full bg-orange-500/10 px-3 py-0.5 text-sm text-orange-400">v3.0.1</span>
@@ -308,33 +302,33 @@
 				<div class="mb-4">
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Common Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixHome size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Home</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixSearch size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Search</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixSettings size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Settings</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixHeart size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Heart</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixStar size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Star</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixCalendar size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Calendar</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixMail size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Mail</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixPhone size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Phone</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixCamera size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Camera</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixChevronRight size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">ChevronRight</span></div>
+						<IconCell label="Home"><RemixHome size={`${SIZE}`} /></IconCell>
+						<IconCell label="Search"><RemixSearch size={`${SIZE}`} /></IconCell>
+						<IconCell label="Settings"><RemixSettings size={`${SIZE}`} /></IconCell>
+						<IconCell label="Heart"><RemixHeart size={`${SIZE}`} /></IconCell>
+						<IconCell label="Star"><RemixStar size={`${SIZE}`} /></IconCell>
+						<IconCell label="Calendar"><RemixCalendar size={`${SIZE}`} /></IconCell>
+						<IconCell label="Mail"><RemixMail size={`${SIZE}`} /></IconCell>
+						<IconCell label="Phone"><RemixPhone size={`${SIZE}`} /></IconCell>
+						<IconCell label="Camera"><RemixCamera size={`${SIZE}`} /></IconCell>
+						<IconCell label="ChevronRight"><RemixChevronRight size={`${SIZE}`} /></IconCell>
 					</div>
 				</div>
 
 				<div>
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Brand Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixInstagram size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Instagram</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixWhatsapp size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">WhatsApp</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixGithub size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Github</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixTwitter size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">Twitter/X</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><RemixTiktok size={REMIX_SIZE} /></div><span class="text-[10px] text-zinc-500">TikTok</span></div>
+						<IconCell label="Instagram"><RemixInstagram size={`${SIZE}`} /></IconCell>
+						<IconCell label="WhatsApp"><RemixWhatsapp size={`${SIZE}`} /></IconCell>
+						<IconCell label="Github"><RemixGithub size={`${SIZE}`} /></IconCell>
+						<IconCell label="Twitter/X"><RemixTwitter size={`${SIZE}`} /></IconCell>
+						<IconCell label="TikTok"><RemixTiktok size={`${SIZE}`} /></IconCell>
 					</div>
 				</div>
 			</section>
 
-			<!-- ======================== HUGEICONS ======================== -->
-			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+			<!-- HUGEICONS -->
+			<section class="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 				<div class="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
 					<h2 class="text-2xl font-semibold text-white">@hugeicons/svelte</h2>
 					<span class="rounded-full bg-pink-500/10 px-3 py-0.5 text-sm text-pink-400">v1.1.2</span>
@@ -363,34 +357,34 @@
 				<div class="mb-4">
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Common Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={Home01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Home</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={Search01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Search</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={Settings01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Settings</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={FavouriteIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Heart</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={StarIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Star</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={Calendar01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Calendar</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={Mail01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Mail</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={TelephoneIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Phone</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={Camera01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Camera</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={ArrowRight01Icon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">ArrowRight</span></div>
+						<IconCell label="Home"><HugeiconsIcon icon={Home01Icon} size={SIZE} /></IconCell>
+						<IconCell label="Search"><HugeiconsIcon icon={Search01Icon} size={SIZE} /></IconCell>
+						<IconCell label="Settings"><HugeiconsIcon icon={Settings01Icon} size={SIZE} /></IconCell>
+						<IconCell label="Heart"><HugeiconsIcon icon={FavouriteIcon} size={SIZE} /></IconCell>
+						<IconCell label="Star"><HugeiconsIcon icon={StarIcon} size={SIZE} /></IconCell>
+						<IconCell label="Calendar"><HugeiconsIcon icon={Calendar01Icon} size={SIZE} /></IconCell>
+						<IconCell label="Mail"><HugeiconsIcon icon={Mail01Icon} size={SIZE} /></IconCell>
+						<IconCell label="Phone"><HugeiconsIcon icon={TelephoneIcon} size={SIZE} /></IconCell>
+						<IconCell label="Camera"><HugeiconsIcon icon={Camera01Icon} size={SIZE} /></IconCell>
+						<IconCell label="ArrowRight"><HugeiconsIcon icon={ArrowRight01Icon} size={SIZE} /></IconCell>
 					</div>
 				</div>
 
 				<div>
 					<h3 class="mb-3 text-xs uppercase tracking-wider text-zinc-500">Brand Icons</h3>
 					<div class="flex flex-wrap gap-6">
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={InstagramIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Instagram</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={WhatsappIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">WhatsApp</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={GithubIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Github</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={TwitterIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">Twitter/X</span></div>
-						<div class="flex flex-col items-center gap-1.5"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/80 transition-colors hover:bg-zinc-700/80"><HugeiconsIcon icon={TiktokIcon} size={SIZE} /></div><span class="text-[10px] text-zinc-500">TikTok</span></div>
+						<IconCell label="Instagram"><HugeiconsIcon icon={InstagramIcon} size={SIZE} /></IconCell>
+						<IconCell label="WhatsApp"><HugeiconsIcon icon={WhatsappIcon} size={SIZE} /></IconCell>
+						<IconCell label="Github"><HugeiconsIcon icon={GithubIcon} size={SIZE} /></IconCell>
+						<IconCell label="Twitter/X"><HugeiconsIcon icon={TwitterIcon} size={SIZE} /></IconCell>
+						<IconCell label="TikTok"><HugeiconsIcon icon={TiktokIcon} size={SIZE} /></IconCell>
 					</div>
 				</div>
 			</section>
 		</div>
 
 		<!-- Summary Table -->
-		<div class="mt-16 overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur">
+		<div class="mt-16 overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8">
 			<h2 class="mb-6 text-2xl font-semibold text-white">Quick Comparison</h2>
 			<table class="w-full text-left text-sm">
 				<thead>
